@@ -3,8 +3,9 @@
 class Task {
     private $id;
     private $title;
+    private $description;
 
-    public function __construct($id, $title) {
+    public function __construct($id, $title, $description) {
         $this->id = $id;
         $this->title = $title;
         $this->description = $description;
@@ -96,7 +97,7 @@ while (true) {
             updateTask($tasks);
             break;
         case 4:
-            deleteTasks();
+            deleteTask($tasks);
             break;
         case 5:
             echo "Exiting the application. Goodbye!\n";
